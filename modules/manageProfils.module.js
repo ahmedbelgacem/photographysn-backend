@@ -22,8 +22,8 @@ router.get("/all", (req, res) => {
     res.json(profils);
   });
 });
-router.get("/select/:ProfilId", (req, res) => {
-  Profil.findById(req.params.ProfilId, (err, profil) => {
+router.get("/select/:ProfilName", (req, res) => {
+  Profil.find({name:req.params.ProfilName}, (err, profil) => {
     if (err) {
       res.send(err);
     }

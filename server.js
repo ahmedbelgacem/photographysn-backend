@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyparser = require("body-parser");
+const cors = require("cors")
 const app = express();
 app.use(bodyparser.json());
 const mongoose = require("mongoose");
@@ -10,6 +11,7 @@ mongoose.connect("mongodb://root:admin123@127.0.0.1:27017/admin", {
 mongoose.Promise = global.Promise;
 
 app.use(fileUploader());
+app.use(cors());
 const routing = require("./routing");
 var port = process.env.PORT || 8080;
 app.listen(port, () => {
