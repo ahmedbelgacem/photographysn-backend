@@ -1,19 +1,27 @@
 {
-  "name": "photographysn-backend",
+  "name": "backend-photographysn",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ahmedbelgacem/photographysn-backend.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ahmedbelgacem/photographysn-backend/issues"
-  },
-  "homepage": "https://github.com/ahmedbelgacem/photographysn-backend#readme"
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "md5": "^2.2.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.8.7",
+    "mongoose-autopopulate": "^0.10.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2",
+    "streamifier": "^0.1.1",
+    "un": "0.0.0"
+  }
 }
