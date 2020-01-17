@@ -1,5 +1,7 @@
 const express = require("express");
+//var cors = require('cors')
 var router = express.Router();
+//router.use(cors());
 router.post("/upload", (req, res) => {
   var file = req.files.img;
   file.name=file.name.split(' ').join('-');

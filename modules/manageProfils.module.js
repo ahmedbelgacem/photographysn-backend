@@ -1,7 +1,8 @@
 const express = require("express");
+//var cors = require('cors')
 var router = express.Router();
 var Profil = require("../models/profilModel").model;
-
+//router.use(cors());
 router.post("/addProfil", (req, res) => {
   const newprofil = new Profil(req.body);
 
@@ -14,6 +15,10 @@ router.post("/addProfil", (req, res) => {
   });
 });
 router.get("/all", (req, res) => {
+  /*res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Credentials', true)
+  res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS')
+  res.header('Access-Control-Allow-Headers', 'Content-Type')*/
   Profil.find({}, (err, profils) => {
     if (err) {
       res.send(err);
