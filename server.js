@@ -15,6 +15,7 @@ const mongoose = require("mongoose");
 const fileUploader = require("./lib/index");
 
 mongoose.connect("mongodb://root:admin123@127.0.0.1:27017/admin", {
+  useUnifiedTopology: true,
   useNewUrlParser: true
 });
 mongoose.Promise = global.Promise;
